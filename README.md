@@ -13,25 +13,25 @@ https://en.wikipedia.org/wiki/Wikipedia:About
 Training Usage
 -----
 
-    python TrainingModel.py train_data_file output_model_file output_char_to_index_file
+    python TrainingWeight.py train_data_file output_weight_file output_tokenizer_file
 
     ex)
-    python TrainingModel.py ./data/train_data.txt ./model/rnnlm_model.h5 ./model/char_to_index.pickle
+    python TrainingWeight.py ./data/train_data.txt ./weight/embed_weight.pickle ./weight/tokenizer.pickle
 
 Training Result
 -----
 
 ![train_result.jpg](./example/train_result.jpg)
 
-Generation Usage
+Prediction Usage
 -----
 
-    python PredictSentence.py input_model_file input_char_to_index_file "input_sentence" output_char_count
+    python PredictSimilar.py input_weight_file input_tokenizer_file input_word output_word_count
 
     ex)
-    python PredictSentence.py ./model/rnnlm_model.h5 ./model/char_to_index.pickle "wikipedia is" 30
+    python PredictSimilar.py ./weight/embed_weight.pickle ./weight/tokenizer.pickle wikipedia 5
 
-Generation Result
+Prediction Result
 -----
 
-![generation_result.jpg](./example/generation_result.jpg)
+![prediction_result.jpg](./example/prediction_result.jpg)
