@@ -29,7 +29,7 @@ Prediction Usage
     python PredictSimilar.py input_weight_file input_tokenizer_file input_word output_word_count
 
     ex)
-    python PredictSimilar.py ./weight/embed_weight.pickle ./weight/tokenizer.pickle wikipedia 5
+    python PredictSimilar.py ./weight/embed_weight.pickle ./weight/tokenizer.pickle wikipedia 10
 
 Prediction Result
 -----
